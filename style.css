@@ -53,7 +53,7 @@
 
 /* The whole bar */
 #waybar {
-    background: @background_color;
+    background: @transparent_background_color;
     color: @text_color;
 }
 
@@ -113,7 +113,7 @@
 
 #clock {
     font-weight: bold;
-    background-color: @accent_color;
+    background-color: @background_color;
 }
 
 #cpu {
@@ -194,12 +194,16 @@
     padding-left: 5px;
     padding-right: 5px;
     color: @accent_color;
-}
+    background-color: transparent;
+  }
+
+  #workspaces button:hover {
+    background-color: @background_color;
+  }
 
 #workspaces button.focused {
     border-color: @accent_color;
     color: @text_color;
-    background-color: @accent_color;
 }
 
 #workspaces button.urgent {
