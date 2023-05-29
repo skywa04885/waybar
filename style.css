@@ -1,0 +1,87 @@
+@define-color background #223422;
+@define-color foreground #f8f8f2;
+@define-color green #00FF00;
+@define-color red #ff0000;
+@define-color yellow #ffff00;
+
+* {
+  border-radius: 0;
+  font-family: "FiraCode";
+  font-size: 10px;
+  box-shadow: none;
+  text-shadow: none;
+  transition-duration: 0s;
+}
+
+window {
+  color: @green;
+  background: transparent;
+}
+
+#workspaces {
+  margin-left: 8px;
+  margin-top: 8px;
+}
+
+#workspaces button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: @green;
+}
+
+#window {
+  margin-left: 32px;
+  margin-top: 8px;
+}
+
+#workspaces button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#workspaces button.visible {
+  color: @green;
+}
+
+#workspaces button.focused {
+  background: @green;
+  color: @background;
+}
+
+#workspaces button.urgent {
+  color: @foreground;
+  background-color: @red;
+}
+
+#mode,
+#battery,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#backlight,
+#clock {
+  color: @green;
+  border: 1px solid @green;
+  padding: 2px 5px;
+  margin-top: 8px;
+  margin-right: 8px;
+  background-color: @background;
+}
+
+#battery.warning {
+  color: @yellow;
+}
+
+#battery.critical {
+  color: @red;
+}
+
+#battery.charging {
+  color: @green;
+}
+
+#tray {
+  margin-top: 8px;
+  margin-right: 16px;
+}
